@@ -36,6 +36,12 @@ app.get('/api/users', async (req, res) => {
     }
 });
 
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+
+
 
 app.put('/api/users/:id/add-mobile', async (req, res) => {
     const { MobileNumber } = req.body;
