@@ -47,7 +47,7 @@ const SearchBar = () => {
 
     useEffect(() => {
         const fetchUsers = async () => {
-            const response = await fetch('http://localhost:5000/api/users');
+            const response = await fetch('https://voterboot-backend.onrender.com/api/users');
             const data = await response.json();
             setUsers(data);
         };
@@ -71,7 +71,7 @@ const SearchBar = () => {
 
     const handleAddMobile = async () => {
         if (newMobileNumber && currentUserId) {
-            const response = await fetch(`http://localhost:5000/api/users/${currentUserId}/add-mobile`, {
+            const response = await fetch(`https://voterboot-backend.onrender.com/api/users/${currentUserId}/add-mobile`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
