@@ -41,14 +41,14 @@ const errorHandler = (err, req, res, next) => {
 };
 
 // Define API routes
-app.get('/api/users', async (req, res) => {
-    try {
-        const users = await User.find().lean();
-        res.json(users);
-    } catch (error) {
-        res.status(500).json({ message: error.message });
-    }
-});
+// app.get('/api/users', async (req, res) => {
+//     try {
+//         const users = await User.find().lean();
+//         res.json(users);
+//     } catch (error) {
+//         res.status(500).json({ message: error.message });
+//     }
+// });
 
 app.get('/', async (req, res) => {
     try {
